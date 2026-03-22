@@ -4,10 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GitHub Repo Gallery</title>
+    <!-- Font Awesome (GitHub icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <header class="app-header">
+        <div class="app-title">
+            <h1><i class="fa-brands fa-github"></i> GitHub Repo Gallery</h1>
+            <p class="tagline">Enter a GitHub username to view their latest repositories.</p>
+        </div>
+
+        <form id="search-form" class="search-form" aria-label="Search GitHub user">
+            <label for="username">GitHub username</label>
+            <div class="search-row">
+                <input id="username" name="username" type="text" placeholder="e.g. lswilkins29" autocomplete="off" required>
+                <button type="submit" class="btn">Search</button>
+            </div>
+        </form>
+
+        <div id="message" class="message" aria-live="polite"></div>
+    </header>
+
+    <main>
+        <section id="gallery" class="gallery" aria-label="GitHub repository gallery"></section>
+    </main>
 
 </body>
 
